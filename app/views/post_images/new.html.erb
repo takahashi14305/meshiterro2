@@ -1,8 +1,8 @@
 <h1>新規投稿</h1>
-<%= form_with model: @post_image, url: post_images_path do |f| %>
+<%= form_with model: @post_image do |f| %>
   <p>画像</p>
   <%= f.file_field :image, accept: "image/*" %>
-  <p>タイトル</p>
+  <p>お店の名前</p>
   <%= f.text_field :shop_name %>
   <p>本文</p>
   <%= f.text_area :caption %>
