@@ -13,7 +13,11 @@
       <td><%= post_image.user.name %></td>
       <td><%= post_image.shop_name %></td>
       <td><%= post_image.caption %></td>
-      <td><%= image_tag post_image.get_image %></td>
+      <td>
+        <%= link_to post_image_path(post_image.id) do %>
+          <%= image_tag post_image.get_image %>
+        <%end%>
+      </td>
     </tr>
   <%end%>
 </table>
