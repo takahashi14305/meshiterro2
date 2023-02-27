@@ -6,6 +6,7 @@
     <th>お店の名前</th>
     <th>説明</th>
     <th>写真</th>
+    <th>コメント数</th>
   </tr>
   <% @post_images.each do |post_image| %>
     <tr>
@@ -22,6 +23,7 @@
           <%= image_tag post_image.get_image %>
         <%end%>
       </td>
+      <td><%= link_to "#{post_image.post_comments.count}件", post_image_path(post_image.id) %></td>
     </tr>
   <%end%>
 </table>

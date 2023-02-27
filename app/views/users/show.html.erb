@@ -21,7 +21,7 @@
           <%= image_tag post_image.get_image %>
         <%end%>
       </td>
-      <td>コメント数：<%= post_image.post_comment.comment.count %></td>
+      <td><%= link_to "#{post_image.post_comments.count}件", post_image_path(post_image.id) %></td>
     </tr>
   <%end%>
 </table>
